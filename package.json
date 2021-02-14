@@ -1,0 +1,35 @@
+{
+  "name": "patch-hey-chrome-extension",
+  "version": "1.0.0",
+  "description": "",
+  "main": "Gulpfile.js",
+  "scripts": {
+    "build": "gulp"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/christianjuth/extended-keyboard-shortcuts-for-hey.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/christianjuth/extended-keyboard-shortcuts-for-hey/issues"
+  },
+  "homepage": "https://github.com/christianjuth/extended-keyboard-shortcuts-for-hey#readme",
+  "dependencies": {
+    "@babel/core": "^7.12.16",
+    "@babel/plugin-proposal-class-properties": "^7.12.13",
+    "@babel/plugin-transform-runtime": "^7.12.15",
+    "@babel/preset-env": "^7.12.16",
+    "@types/gulp": "^4.0.8",
+    "babel-loader": "^8.2.2",
+    "gulp": "^4.0.2",
+    "gulp-clean": "^0.4.0",
+    "gulp-cli": "^2.3.0",
+    "gulp-minify": "^3.1.0",
+    "gulp-zip": "^5.0.2",
+    "vinyl-named": "^1.1.0",
+    "webpack-stream": "^6.1.2"
+  },
+  "browserslist": "> 0.25%, not dead"
+}

@@ -1,6 +1,6 @@
 {
   "name": "Extended Keyboard Shortcuts for Hey",
-  "version": "1.0",
+  "version": "1.0.0",
   "description": "Adds additional keyboard shortcuts to app.hey.com that I thought were missing.",
   "manifest_version": 2,
   "content_scripts": [

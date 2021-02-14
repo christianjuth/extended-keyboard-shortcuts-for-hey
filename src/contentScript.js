@@ -175,12 +175,16 @@ async function addKeyBindings(e) {
       state.lastAction = actions.SELECT_DOWN
     }
 
-    if (state.lastAction === actions.SELECT_DOWN) {
-      $('.inbox .posting--focus-within input:not(:checked)').first().click()
+    if(!$('.inbox .posting--focus-within').hasElements()) {
+      $('.inbox .posting input').first().click()
     } else {
-      $('.inbox .posting--focus-within input:checked').first().click()
+      if (state.lastAction === actions.SELECT_DOWN) {
+        $('.inbox .posting--focus-within input:not(:checked)').first().click()
+      } else {
+        $('.inbox .posting--focus-within input:checked').first().click()
+      }
+      getNextFocusableItem()?.find('input').click()
     }
-    getNextFocusableItem().find('input').click()
 
     if (!bulkSelectingActive()) {
       state.lastAction = ''
@@ -194,12 +198,16 @@ async function addKeyBindings(e) {
       state.lastAction = actions.SELECT_UP
     }
 
-    if (state.lastAction === actions.SELECT_UP) {
-      $('.inbox .posting--focus-within input:not(:checked)').first().click()
+    if(!$('.inbox .posting--focus-within').hasElements()) {
+      $('.inbox .posting input').last().click()
     } else {
-      $('.inbox .posting--focus-within input:checked').first().click()
+      if (state.lastAction === actions.SELECT_UP) {
+        $('.inbox .posting--focus-within input:not(:checked)').first().click()
+      } else {
+        $('.inbox .posting--focus-within input:checked').first().click()
+      }
+      getPreviousFocusableItem()?.find('input').click()
     }
-    getPreviousFocusableItem().find('input').click()
 
     if (!bulkSelectingActive()) {
       state.lastAction = ''
