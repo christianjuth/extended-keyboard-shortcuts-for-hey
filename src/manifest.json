@@ -1,0 +1,24 @@
+{
+  "name": "Extended Keyboard Shortcuts for Hey",
+  "version": "1.0",
+  "description": "Adds additional keyboard shortcuts to app.hey.com that I thought were missing.",
+  "manifest_version": 2,
+  "content_scripts": [
+    {
+      "matches": [
+        "https://app.hey.com/*"
+      ],
+      "js": [
+        "contentScript.js"
+      ]
+    }
+  ],
+  "browser_action": {
+    "default_icon": {
+      "16": "icon16.png",
+      "32": "icon32.png"
+    },
+    "default_popup": "popup.html",
+    "default_title": "Keyboard Shortcuts"
+  }
+}
